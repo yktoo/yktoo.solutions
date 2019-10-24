@@ -1,0 +1,20 @@
+enable: true
+heading: About Us
+aboutItem:
+    - icon: tf-strategy
+      title: We're Professional
+      content: >-
+          Only **experience** can help one to avoid numerous pitfalls, especially when building a software product
+          that will operate in a complex IT landscape.
+
+    - icon: tf-paintbrush
+      title: We're Creative
+      content: >-
+          Complex IT problems require a good share of creative thinking. It's also important that the product is
+          delivering a pleasing user experience.
+
+    - icon: tf-tools-2
+      title: We're Versatile
+      content: >-
+          We master **lots** of languages, platforms, and frameworks: Java, JavaScript, Python, Linux, Angular, Docker,
+          Ansible, SQL etc. And we never stop learning.

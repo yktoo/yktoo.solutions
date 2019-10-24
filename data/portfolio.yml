@@ -1,0 +1,123 @@
+enable: true
+heading: Our Projects
+headingDetails: Below are a few examples of the projects we've completed or worked on.
+filters:
+    - tag: cloud
+      title: Cloud
+
+    - tag: docker
+      title: Docker
+
+    - tag: java
+      title: Java
+
+    - tag: db
+      title: SQL & NoSQL
+
+    - tag: angular
+      title: Angular
+
+    - tag: php
+      title: PHP & Yii
+
+    - tag: etl
+      title: ETL
+
+portfolioItem:
+    - title: Electronic Ticketing System
+      image: images/portfolio/lbs-et.png
+      description: Desktop application for NS railway ticket counters.
+      customer: NS
+      url: false
+      tags: db, java, angular, docker
+
+    - title: Standaard Platform
+      image: images/portfolio/standaard-platform.png
+      description: Unified cloud-based platform solution for government applications.
+      customer: Ministry of Infrastructure and Environment
+      url: false
+      tags: db, java, cloud, docker
+
+    - title: Bond Proxy
+      image: images/portfolio/bond-proxy.png
+      description: Web application to calculate and benchmark proxies for bonds.
+      customer: ING Financial Markets
+      url: false
+      tags: angular, db, java, docker
+
+    - title: DMD Jockey
+      image: images/portfolio/dmd-jockey.png
+      description: Web application for centralised management of static and market data.
+      customer: ING Financial Markets
+      url: false
+      tags: angular, db, etl, java, docker
+
+    - title: yktoo.com website
+      image: images/portfolio/yktoo.com.png
+      description: Personal website application and blogging platform.
+      customer: yktoo.com
+      url: https://yktoo.com
+      tags: db, php, docker, cloud
+
+    - title: Aikikai Amersfoort website
+      image: images/portfolio/aikikai-amersfoort.png
+      description: Website application and blogging platform.
+      customer: Joginder Singh Aikido
+      url: http://aikikai-amersfoort.nl/
+      tags: db, php
+
+    - title: Sound Switcher Indicator
+      image: images/portfolio/indicator-sound-switcher.png
+      description: Sound input/output switcher application for Linux.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/indicator-sound-switcher
+      tags: python
+
+    - title: Docker Indicator
+      image: images/portfolio/indicator-docker.png
+      description: Application indicator for controlling Docker containers in Ubuntu Linux.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/indicator-docker
+      tags: python
+
+    - title: InfoPi
+      image: images/portfolio/infopi.png
+      description: Information screen web application for Raspberry Pi.
+      customer: Public Domain
+      url: https://yktoo.com/en/blog/post/278
+      tags: angular, python
+
+    - title: Rattle
+      image: images/portfolio/rattle.png
+      description: Lightweight and modular ETL application using JSON data flow definitions.
+      customer: Public Domain
+      url: https://github.com/yktoo/rattle/blob/master/doc/index.md
+      tags: db, etl, python
+
+    - title: iSZN
+      image: images/portfolio/iszn.png
+      description: Document and payment management system for social institutions.
+      customer: Numerous regional social institutions
+      url: http://www.ites.ru/products/iszn/
+      tags: db, delphi, etl, java
+
+    - title: PhoA
+      image: images/portfolio/phoa.png
+      description: Powerful image catalogue software.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/phoa
+      tags: delphi
+
+    - title: DKLang Localization Package
+      image: images/portfolio/dklang.png
+      description: Open source localisation library for Delphi.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/dklang
+      tags: delphi
+
+    - title: PackageEditor
+      image: images/portfolio/oracle-package-editor.png
+      description: Package code editor for Oracle Database.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/oracle-package-editor
+      tags: delphi, db

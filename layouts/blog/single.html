@@ -1,0 +1,69 @@
+{{ define "main" }}
+
+{{ partial "main/navigation.html" . }}
+
+<section class="section single-blog">
+    <div class="container">
+        <div class="row">
+            <!-- Top previous-next post link bar -->
+            <div class="col">
+                <nav class="paginator-before" aria-label="Blog navigation">{{ partial "blog/post_nav" . }}</nav>
+            </div>
+
+            <!-- Post title -->
+            <div class="col-lg-12 text-center">
+                <h1>{{ .Title }}</h1>
+                <ul class="list-inline mb-50">
+                    <li class="list-inline-item"><a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></li>
+                    <li class="list-inline-item">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</li>
+                </ul>
+            </div>
+
+            <!-- Post text -->
+            <div class="col-lg-10">
+                <div class="post-single-content">
+                    {{ .Content }}
+
+                    <!-- Sharing buttons -->
+                    {{ if .Site.Data.blog.sharing }}
+                        {{ partial "blog/post_share" . }}
+                    {{ end }}
+
+                    <!-- Comments -->
+                    {{ if .Site.Data.blog.comments.enable }}
+                    <section class="post-comments">
+                        <h3>{{ T "comments" }}</h3>
+                        <!-- Do not insert comments block in drafts or when running on localhost -->
+                        {{ if or .Draft (in (print $.Site.BaseURL) "localhost") }}
+                        <div>(comments will go here)</div>
+                        {{ else }}
+                        <div id="commento"></div>
+                        <script src="{{ .Site.Data.blog.comments.url }}"></script>
+                        {{ end }}
+                    </section>
+                    {{ end }}
+                </div>
+            </div>
+
+            <!-- Table of contents -->
+            <div class="col-lg-2 sidebar">
+                <div id="toc-sidebar" class="sticky-top d-none d-lg-block">
+                    <h4 id="toc-title">{{ T "tableOfContents" }}</h4>
+                    {{ .TableOfContents }}
+                </div>
+
+                <!-- TODO div id="tags-sidebar">
+                    <h4 id="tags-title">{{ T "tags" }}</h4>
+
+                </div-->
+            </div>
+
+            <!-- Bottom previous-next post link bar -->
+            <div class="col">
+                <nav class="paginator-after" aria-label="Blog navigation">{{ partial "blog/post_nav" . }}</nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,13 @@
+<script src="{{ "plugins/jquery/dist/jquery.min.js" | absURL }}"></script>
+<script src="{{ "plugins/bootstrap/dist/js/bootstrap.bundle.min.js" | absURL }}"></script>
+<script src="{{ "plugins/slick-carousel/slick/slick.min.js" | absURL }}"></script>
+<script src="{{ "plugins/filterzr/jquery.filterizr.min.js" | absURL }}"></script>
+<script src="{{ "plugins/magnific-popup/dist/jquery.magnific-popup.min.js" | absURL }}"></script>
+{{ with .Site.Params.GoogleMaps }}
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ . }}&libraries=places"></script>
+    <script src="{{ (resources.Get "js/gmaps.js" | minify).Permalink }}"></script>
+{{ end }}
+<script src="{{ "plugins/wow/dist/wow.min.js" | absURL }}"></script>
+<script src="{{ "plugins/sweet-alert/sweetalert.min.js" | absURL }}"></script>
+<script src="{{ (resources.Get "js/scroll-behavior-polyfill.js" | minify).Permalink }}"></script>
+<script src="{{ (resources.Get "js/script.js" | minify).Permalink }}"></script>

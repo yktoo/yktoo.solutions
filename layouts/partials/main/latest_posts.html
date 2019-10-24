@@ -1,0 +1,20 @@
+{{ if .Site.Data.blog.enable}}
+<section id="blog" class="section">
+    <div class="container">
+        <!-- Heading -->
+        {{ with T "latestPosts" }}{{ partial "main/heading" . }}{{ end }}
+
+        <div class="row">
+            <!-- List first frontPagePosts blog posts -->
+            {{ range first .Site.Params.frontPagePosts (where .Site.RegularPages "Type" "blog") }}
+            {{ .Render "list-item" }}
+            {{ end }}
+
+            <!-- "View all posts" button -->
+            <div class="text-center col-lg-12">
+                <a class="btn btn-main" href="/blog">{{ T "viewAllPosts" }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

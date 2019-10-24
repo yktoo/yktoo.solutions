@@ -1,0 +1,64 @@
+baseURL: https://yktoo.solutions/
+languageCode: en-us
+defaultContentLanguage: en
+pygmentsCodeFences: true
+pygmentsStyle: tango
+title: Yktoo Solutions
+summaryLength: 15
+googleAnalytics: UA-19569086-6
+enableRobotsTXT: true
+
+permalinks:
+    # Arrange blog posts in /blog/YYYY/MM/DD-name structure
+    blog: /blog/:year/:month/:day-:title/
+
+taxonomies:
+    author: author
+    category: categories
+    tag: tags
+
+menu:
+    nav:
+        - identifier: aboutUs
+          url: '/#about'
+          weight: 2
+        - identifier: service
+          url: '/#services'
+          weight: 3
+        - identifier: portfolio
+          url: '/#portfolio'
+          weight: 4
+        - identifier: team
+          url: '/#our-team'
+          weight: 5
+        - identifier: clients
+          url: '/#testimonial'
+          weight: 6
+        - identifier: blog
+          url: '/blog/'
+          weight: 7
+        - identifier: contact
+          url: '/#contact'
+          weight: 8
+
+    blog:
+      - identifier: posts
+        url: '/blog/'
+        weight: 10
+      - identifier: authors
+        url: '/author/'
+        weight: 20
+      - identifier: tags
+        url: '/tags/'
+        weight: 30
+      - identifier: categories
+        url: '/categories/'
+        weight: 40
+
+params:
+    home: Home
+    logo: images/logos/logo-48px.png
+    description: First Time Right
+    author: Yktoo Solutions
+    # googleMaps: AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU
+    frontPagePosts: 3

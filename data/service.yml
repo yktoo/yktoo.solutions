@@ -1,0 +1,63 @@
+enable: true
+heading: Our Services
+serviceItem:
+    - icon: tf-globe
+      title: Full-Stack Development
+      content: >-
+          The term means web application development that implements both back-end and front-end technologies. This
+          obviously covers a broad variety of disciplines, such as databases, Java, Python, HTML, CSS, JavaScript
+          frameworks, like jQuery and AngularJS and everything in between.
+
+    - icon: tf-ion-soup-can
+      title: Database Development
+      content: >-
+          Relational databases, although being pushed by distributed key-value stores in the last years, are still at
+          the core of many applications. We have lots of experience with Oracle, PostgreSQL, Sybase, MySQL, and SQLite.
+          And on the NoSQL side with distributed stores such as Tibco Active Spaces and Apache Ignite.
+
+    - icon: tf-ion-coffee
+      title: Java
+      content: >-
+          Java is a de facto standard for enterprise applications, thanks to its very high adoption rate in the
+          corporate environment and myriads of libraries and frameworks. We have many years of experience in Java and
+          related topics, such as dependency injection, unit and integration testing, ORM, messaging and many others.
+
+    - icon: tf-ion-social-angular
+      title: JavaScript & Angular
+      content: >-
+          Angular has gained incredible popularity over the last few years. It allows to create highly interactive, rich
+          web applications, in a relatively unencumbered way. We have developed a number of web applications that use
+          Angular in the front-end, with unit and end-2-end testing.
+
+    - icon: tf-ion-social-python
+      title: Python
+      content: >-
+          Python is a very powerful, concise and flexible language used everywhere, from embedded systems to desktop and
+          web applications. Our knowledge of Python is pretty powerful, too.
+
+    - icon: tf-ion-android-cloud-outline
+      title: Clouds
+      content: >-
+          We love clouds—that is, the computer ones. We run our numerous services using cloud providers such as AWS,
+          Scaleway, and Render.com. And we've executed projects that involved automated provisioning and
+          Infrastructure-as-Code.
+
+    - icon: tf-ion-cube
+      title: Docker and Friends
+      content: >-
+          Containerisation is one of the key technologies in these days. Running software in containers encourages loose
+          component coupling, provides isolation and security, enables on-demand up- and down-scaling, and greatly
+          facilitates continuous integration. We master Docker, Docker Swarm, and Kubernetes.
+
+    - icon: tf-ion-android-share-alt
+      title: Data Integration (ETL)
+      content: >-
+          Data Integration, also known as ETL (Extract, Transform, Load), means combining data from different, often
+          heterogeneous, sources in a way that provides a unified view on this data. It is typically used for
+          integration of different applications and is therefore essential in an enterprise environment.
+
+    - icon: tf-ion-erlenmeyer-flask-bubbles
+      title: ... and Many More
+      content: >-
+          It the IT world, new things appear every day. That is why it's impossible to mention every framework or
+          component we've worked with. That is why we never stop learning.

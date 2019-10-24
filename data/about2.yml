@@ -1,0 +1,16 @@
+enable: true
+image: images/about/perfection.jpg
+title: We’re Perfectionists.
+description: >-
+    We care for quality. We hate loose ends and sloppy work. Things we make just work. Web applications work in any
+    supported browser flawlessly. Tests are fully automated. Any bugs get squashed mercilessly.
+description2: >-
+    Of course, there are always trade-offs, and the quality has its price.
+aboutItem:
+    - icon: tf-circle-compass
+      title: Pixel-Perfect
+      content: Our design principle is "What You See Is What You Love"
+
+    - icon: tf-hotairballoon
+      title: Down With Clutter
+      content: The greatest things in the IT world are simple to use

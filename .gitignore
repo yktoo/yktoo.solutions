@@ -1,0 +1,6 @@
+# Generated content
+resources/_gen/
+
+# IDEs
+.idea/
+*.iml

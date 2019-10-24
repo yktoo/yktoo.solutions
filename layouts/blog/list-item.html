@@ -1,0 +1,21 @@
+<!-- Single post item, which is displayed in a list -->
+<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp" data-wow-duration="500ms">
+    <div class="blog-list-item">
+        <div class="media-wrapper">
+            {{- with .Params.image }}
+                {{- $url := . }}
+                {{- if not (findRE "^(/|http(s?)://)" $url) }}
+                    {{- $url = ($.Page.Resources.GetMatch $url).RelPermalink }}
+                {{- end }}
+                <img class="img-fluid" src="{{ $url }}" alt="Post image">
+            {{- end -}}
+        </div>
+
+        <div class="content">
+            <h5><a href="{{ .Permalink }}">{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a></h5>
+            <p class="post-details">{{ dateFormat "Monday, Jan 2, 2006" .Date }} by <a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></p>
+            <p>{{ with .Params.description }}{{ . | markdownify }}{{ else }}{{ .Summary }}{{ end }}</p>
+            <a class="btn btn-transparent" href="{{ .Permalink }}">{{ T "readOn" }}</a>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,20 @@
+enable: true
+heading: Get In Touch
+title: Contact Details
+content: Feel free to contact us using the feedback form or the email below.
+enable_maps: false
+mapLatitude: 51.5223477
+mapLongitude: -0.1622023
+action: https://formspree.io/info@yktoo.solutions
+contactDetails:
+    - icon: tf-ion-location
+      info: "Houten, Utrecht, Netherlands"
+
+    - icon: tf-ion-asterisk
+      info: "KvK number: **66961033**"
+
+    - icon: tf-ion-asterisk
+      info: "VAT number: **NL002497263B91**"
+
+    - icon: tf-ion-email
+      info: "Email: [info@yktoo.solutions](mailto:info@yktoo.solutions?SUBJECT=Website+contact+form)"

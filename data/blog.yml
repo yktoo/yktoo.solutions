@@ -1,0 +1,5 @@
+enable: true
+sharing: true
+comments:
+    enable: true
+    url: https://comment.yktoo.com/js/commento.js

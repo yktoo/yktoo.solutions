@@ -1,0 +1,30 @@
+{{ if .Site.Data.skill.enable }}
+<section id="team-skills" class="parallax-section section section-dark overly">
+    <div class="container">
+        <!-- Heading -->
+        {{ with .Site.Data.skill.heading }}{{ partial "main/heading" . }}{{ end }}
+
+        <div class="row">
+            <div class="col-lg-6">
+                {{ with .Site.Data.skill.title }} <h2> {{ . }} </h2> {{ end }}
+                {{ with .Site.Data.skill.content }} <p> {{ . }} </p> {{ end }}
+                <img class="img-fluid" src="{{ .Site.Data.skill.image | absURL }}" alt="image">
+            </div>
+            <div class="col-lg-6">
+                <ul class="skill-bar">
+                    {{ range .Site.Data.skill.skillItem }}
+                    <li>
+                        <p><span>{{ .itemNumber }}</span>{{ .itemName }}</p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100" style="width:{{ .itemPercent }}">
+                            </div>
+                        </div>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

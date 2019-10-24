@@ -1,0 +1,13 @@
+{{ if .Site.Data.cta.enable}}
+<section class="call-to-action section-sm bg-1 overly" style='background-image: url("{{ .Site.Data.cta.bgImage | absURL }}")'>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+               {{ with .Site.Data.cta.title}} <h2>{{ . }}</h2> {{ end }}
+               {{ with .Site.Data.cta.content }} <p>{{ . }}</p> {{ end }}
+                <a href="{{ .Site.Data.cta.btnURL }}" class="btn btn-main">{{ with .Site.Data.cta.btnText }} {{ . }} {{end}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,38 @@
+{{ if .Site.Data.team.enable}}
+<section id="our-team" class="section">
+    <div class="container">
+        <!-- Heading -->
+        {{ with .Site.Data.team.heading }}{{ partial "main/heading" . }}{{ end }}
+
+        <!-- Team member blocks -->
+        <div class="row">
+            {{ range .Site.Data.team.teamMember}}
+            <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
+                <div class="team-member">
+                    <!-- Photo -->
+                    <div class="member-photo">
+                        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
+
+                        <!-- Overlay with social links -->
+                        <div class="mask">
+                            <ul class="list-inline">
+                                {{ range .socialIcon }}
+                                <li class="list-inline-item" title="{{ .title }}"><a href="{{ .url }}" target="_blank"><i class="{{ .icon }}"></i></a></li>
+                                {{ end }}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Name and description -->
+                    <div class="member-meta">
+                        <h5>{{ .name }}</h5>
+                        <span>{{ .designation }}</span>
+                        <p>{{ .description }}</p>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

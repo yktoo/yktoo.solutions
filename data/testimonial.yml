@@ -1,0 +1,27 @@
+enable: true
+heading: Our Clients
+bgImage: images/backgrounds/bg-1.jpg
+testimonialItem:
+    - name: Telfort
+      image: images/testimonial/telfort.png
+      content: Mobile telecommunications company<br>_(nowadays acquired by KPN)_.
+
+    - name: ING Bank
+      image: images/testimonial/ing.png
+      content: Financial sector, Credit and Market Risk.
+
+    - name: Nederlandse Spoorwegen
+      image: images/testimonial/ns.png
+      content: Dutch state-owned company, the principal passenger railway operator in the Netherlands.
+
+    - name: Ministry of Infrastructure and Environment
+      image: images/testimonial/min-ienm.png
+      content: Government body managing Dutch public infrastructure.
+
+    - name: Eonics
+      image: images/testimonial/eonics.png
+      content: Software development company.
+
+    - name: ITES
+      image: images/testimonial/ites.png
+      content: Software development company.

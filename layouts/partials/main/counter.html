@@ -1,0 +1,17 @@
+{{ if .Site.Data.counter.enable }}
+<section id="counter" class="parallax-section bg-1 section overly" style='background-image: url("{{ .Site.Data.counter.bgImage | absURL }}")'>
+    <div class="container">
+        <div class="row">
+            {{ range .Site.Data.counter.counterItem }}
+            <div class="col-lg-3 col-md-6 col-12 text-center wow fadeInDown" data-wow-duration="500ms">
+                <div class="counters-item">
+                    <i class="{{ .icon }}"></i>
+                    <span>{{ .count }}</span>
+                    <h3 class="text-truncate">{{ .title }}</h3>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

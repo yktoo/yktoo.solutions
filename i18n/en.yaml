@@ -1,0 +1,31 @@
+- {id: aboutUs,              translation: About Us}
+- {id: aboutAuthor,          translation: About author}
+- {id: authorOfPostsOnBlog,  translation: Author of posts on the blog}
+- {id: authors,              translation: Authors}
+- {id: authorsOfPosts,       translation: Authors of posts}
+- {id: authorsOfPostsOnBlog, translation: Authors of posts on the blog}
+- {id: authorsPosts,         translation: Author's posts}
+- {id: blog,                 translation: Blog}
+- {id: blogPosts,            translation: Blog Posts}
+- {id: blogs,                translation: Blogs}
+- {id: blogTags,             translation: Blog Tags}
+- {id: categories,           translation: Categories}
+- {id: clients,              translation: Clients}
+- {id: comments,             translation: Comments}
+- {id: contact,              translation: Contact}
+- {id: contact,              translation: Contact}
+- {id: details,              translation: Details}
+- {id: followUs,             translation: Follow Us}
+- {id: home,                 translation: Home}
+- {id: latestPosts,          translation: Latest Posts}
+- {id: numPages,             translation: {one: 'One page', other: '{{ .Count }} pages'}}
+- {id: portfolio,            translation: Portfolio}
+- {id: posts,                translation: Posts}
+- {id: readOn,               translation: Read on}
+- {id: service,              translation: Service}
+- {id: share,                translation: Share}
+- {id: tableOfContents,      translation: Contents}
+- {id: tag,                  translation: Tag}
+- {id: tags,                 translation: Tags}
+- {id: team,                 translation: Team}
+- {id: viewAllPosts,         translation: View All Posts}

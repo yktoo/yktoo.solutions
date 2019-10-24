@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+{{ partial "main/navigation.html" . }}
+
+<section id="list" class="section">
+    <div class="container">
+        <!-- Heading -->
+        {{ with .Title }}{{ partial "main/heading" . }}{{ end }}
+
+        <!-- Navigation menu -->
+        {{ partial "blog/navbar" . }}
+
+        <!-- Item list -->
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline text-center">
+                    {{ range .Data.Pages }}
+                    <li class="list-inline-item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}

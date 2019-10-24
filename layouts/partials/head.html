@@ -1,0 +1,37 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .IsPage }}{{ .Summary | plainify }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ with .Site.Params.author }}{{ . }}{{ end }}{{ end }}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Meta tags for proper sharing on social networks etc. -->
+    {{ if eq .Section "blog" -}}
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="{{ .Title }}">
+    <meta property="og:description" content="{{ .Summary }}">
+    {{ with .Params.image }}{{ with $.Page.Resources.GetMatch . }}<meta property="og:image" content="{{ .Permalink }}">{{ end }}{{ end }}
+    {{ end -}}
+
+    <!-- Generator meta tag -->
+    {{- hugo.Generator -}}
+
+    <!-- Page title -->
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{" | "}}{{ .Site.Params.Description }}{{ else if .IsPage}}{{ .Title }}{{" | "}}{{ .CurrentSection.Title }}{{else if eq .Section "author" }}{{if .Params.name}}{{.Params.name}} | {{ T "authorOfPostsOnBlog" }} „{{.Site.Title}}" {{else}}{{ T "authorsOfPostsOnBlog" }} „{{.Site.Title}}"{{end}}{{else if eq .Section "blog" }}{{ T "blogs" }} | {{ .Site.Title}}{{else}}{{ .Title }}{{with .Params.Description}}{{" | " .}}{{ end }}{{ end }}</title>
+
+    <!-- Favicon   -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ `favicon.ico` | absURL }}"/>
+
+    <!-- RSS links -->
+    {{ range .AlternativeOutputFormats -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    <link rel="stylesheet" href="{{ `plugins/themefisher-font/style.css`             | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/bootstrap/dist/css/bootstrap.min.css`   | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/animate-css/animate.css`                | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/magnific-popup/dist/magnific-popup.css` | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/slick-carousel/slick/slick.css`         | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/slick-carousel/slick/slick-theme.css`   | absURL }}">
+    <link rel="stylesheet" href="{{ (resources.Get `css/style.css` | minify).Permalink }}" media="screen">
+    <link rel="stylesheet" href="{{ (resources.Get `css/sharingbuttons.css` | minify).Permalink }}">
+</head>

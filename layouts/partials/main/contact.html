@@ -1,0 +1,56 @@
+{{ if .Site.Data.contact.enable }}
+<section id="contact" class="contact-section section-dark">
+    <div class="container pb-5">
+        <!-- Heading -->
+        {{ with .Site.Data.contact.heading }}{{ partial "main/heading" . }}{{ end }}
+
+        <div class="row">
+            <!-- Contact details -->
+            <div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
+                {{ with .Site.Data.contact.title }} <h3>{{ . }}</h3> {{ end }}
+                {{ with .Site.Data.contact.content }} <p> {{ . }} </p> {{ end }}
+                <div class="contact-details">
+                    {{ range .Site.Data.contact.contactDetails }}
+                    <div class="con-info clearfix">
+                        <i class="{{ .icon }}"></i>
+                        <span>{{ .info | markdownify }}</span>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                <form id="contact-form" class="contact-form" method="post" action="{{ .Site.Data.contact.action | absURL }}" novalidate>
+                    <input type="hidden" name="_language" value="{{ .Site.Language.Lang }}" />
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
+                        <div class="invalid-feedback">Please provide your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" class="form-control" name="email" id="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="Message" class="form-control" name="message" id="message" required></textarea>
+                        <div class="invalid-feedback">Please enter your message.</div>
+                    </div>
+                    <div id="cf-submit">
+                        <input type="submit" id="contact-submit-button" class="btn btn-main" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Maps -->
+    {{ if .Site.Data.contact.enable_maps }}
+    <div class="google-map">
+        <div id="map-canvas" {{ with .Site.Data.contact.mapLatitude }} data-latitude="{{ . }}" {{ end }} {{ with .Site.Data.contact.mapLongitude }} data-longitude="{{ . }}" {{ end }}></div>
+    </div>
+    {{ end }}
+</section>
+{{ end }}

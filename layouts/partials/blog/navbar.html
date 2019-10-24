@@ -1,0 +1,11 @@
+<!-- Button bar -->
+<div class="row">
+    <div id="blog-navbar" class="col-lg-12">
+        <ul class="nav nav-pills justify-content-center">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.blog }}
+            <li class="nav-item"><a href="{{ .URL }}" class="nav-link{{ if $currentPage.IsMenuCurrent `blog` . }} active{{ end }}">{{ T .Identifier }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

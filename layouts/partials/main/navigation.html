@@ -1,0 +1,28 @@
+<nav id="navigation" class="navbar navbar-expand-lg navigation {{ if .IsHome }}sticky-top{{ else }}fixed-top{{ end }}">
+    <div class="container">
+
+        <!-- Navbar logo -->
+        <a class="navbar-brand" href="{{ .Site.BaseURL | absURL }}">
+            <img src="{{ .Site.Params.logo | absURL }}" alt="Logo"/>
+            <span class="pl-2">{{ .Site.Title }}</span>
+        </a>
+
+        <!-- Expand/collapse menu button for small screens -->
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse" id="navbar-collapsible">
+            <ul class="navbar-nav ml-auto navigation-menu">
+                {{ range $.Site.Menus.nav -}}
+                <!-- On the homepage, use only '#anchor' part (if any) for scroll-spying to work properly. If there's no
+                     '#' in the URL and on other pages use the full URL -->
+                {{- $link := cond (and $.IsHome (in .URL "#")) (print "#" (urls.Parse .URL).Fragment) .URL -}}
+                <li class="nav-item"><a class="nav-link" data-scroll href="{{ $link }}">{{ T .Identifier }}</a></li>
+                {{ end -}}
+            </ul>
+        </div>
+    </div>
+
+</nav>

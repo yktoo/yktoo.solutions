@@ -1,0 +1,34 @@
+{{ if .Site.Data.testimonial.enable }}
+<section id="testimonial" class="testimonial overly-light section bg-2" style='background-image: url("{{ .Site.Data.testimonial.bgImage | absURL }}")'>
+    <div class="container">
+        <!-- Heading -->
+        {{ with .Site.Data.testimonial.heading }}{{ partial "main/heading" . }}{{ end }}
+
+        <!-- Testimonial carousel -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div id="testimonials" class="wow fadeInUp" data-wow-duration="500ms" data-wow-delay="100ms">
+                    {{ range .Site.Data.testimonial.testimonialItem }}
+                    <div class="item text-center">
+
+                        <div class="client-thumb">
+                            <img src="{{ .image | absURL }}" class="img-fluid" alt="{{ .name }}">
+                        </div>
+
+                        <div class="client-info">
+                            <div class="client-meta">
+                                <h3>{{ .name }}</h3>
+                                <span>{{ .client }}</span>
+                            </div>
+                            <div class="client-comment">
+                                <p>{{ .content | markdownify }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

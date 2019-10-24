@@ -1,0 +1,24 @@
+#!/bin/bash
+#=======================================================================================================================
+# Create a new blog post
+# Arguments:
+#     None
+#=======================================================================================================================
+
+set -e
+
+project_dir="$(dirname "$(dirname "$(realpath "$0")")")"
+
+pushd "$project_dir" >/dev/null
+
+# Find the max post ID
+id=$(find "content/blog/" -mindepth 1 -maxdepth 1 -type d | xargs basename -a | sort | tail -1)
+
+# Remove leading zeroes and increment
+id="$((10#$id + 1))"
+
+# Format the ID
+id=$(printf "%04d" $id)
+hugo new "blog/$id/index.md"
+
+popd >/dev/null

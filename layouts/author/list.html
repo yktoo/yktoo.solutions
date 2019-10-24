@@ -1,0 +1,71 @@
+{{ define "main" }}
+
+{{ partial "main/navigation.html" . }}
+
+{{ if .Content }}
+<section class="section section-dark">
+    <div class="container">
+        <!-- Heading -->
+        {{ with T "aboutAuthor" }}{{ partial "main/heading" . }}{{ end }}
+
+        <!-- Navigation menu -->
+        {{ partial "blog/navbar" . }}
+
+        <!-- Author's figure -->
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="content text-center">
+                    {{ partial "author-figure" . }}
+                    <hr>
+                    {{ .Content }}
+                    <hr>
+                    <div class="list-group">
+                        {{ with .Params.github }}
+                        <div>
+                            <i class="tf-ion-social-github mr-1"></i>
+                            <span>GitHub: <a href="https://github.com/{{.}}">github.com/{{.}}</a></span>
+                        </div>
+                        {{ end }}
+
+                        {{ with .Params.facebook }}
+                        <div>
+                            <i class="tf-ion-social-facebook mr-1"></i>
+                            <span>Facebook: <a href="https://facebook.com/{{.}}">facebook.com/{{.}}</a></span>
+                        </div>
+                        {{ end }}
+
+                        {{ with .Params.twitter }}
+                        <div>
+                            <i class="tf-ion-social-twitter mr-1"></i>
+                            <span>Twitter: <a href="https://twitter.com/{{.}}">twitter.com/{{.}}</a></span>
+                        </div>
+                        {{ end }}
+
+                        {{ with .Params.instagram }}
+                        <div>
+                            <i class="tf-ion-social-instagram mr-1"></i>
+                            <span>Instagram: <a href="https://instagram.com/{{.}}">instagram.com/{{.}}</a></span>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+<section class="section">
+    <div class="container">
+        <!-- Heading -->
+        {{ with T "authorsPosts" }}{{ partial "main/heading" . }}{{ end }}
+
+        <div class="row">
+            {{ range .Data.Pages }}
+            {{ .Render "list-item" }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

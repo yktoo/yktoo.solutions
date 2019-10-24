@@ -1,0 +1,9 @@
+<figure class="figure blog-image">
+    {{- $url := .Get 0 }}
+    <!-- If the URL doesn't start with '/' or 'http(s)://', consider it a page resource -->
+    {{- if not (findRE "^(/|http(s?)://)" $url) }}
+        {{- $url = ($.Page.Resources.GetMatch $url).RelPermalink }}
+    {{- end }}
+    <a class="image-popup" href="{{ $url }}" data-effect="mfp-with-zoom" data-lightbox="image-1"><img src="{{ $url }}" alt="{{ .Get 1 }}" class="figure-img img-fluid"></a>
+    {{ with .Get 1 }}<figcaption class="figure-caption">{{ . }}</figcaption>{{ end }}
+</figure>

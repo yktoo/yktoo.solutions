@@ -1,0 +1,8 @@
+enable: true
+bgImage: images/front-banner.jpg
+logoImage: images/logos/logo-256px.png
+heading: Yktoo Solutions
+content: first time right
+button:
+    title: Explore Us
+    url: '#about'

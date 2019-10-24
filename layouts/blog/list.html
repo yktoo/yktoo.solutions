@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+{{ partial "main/navigation.html" . }}
+
+<section id="blog" class="section">
+    <div class="container">
+        <!-- Heading -->
+        {{ with T "blogPosts" }}{{ partial "main/heading" . }}{{ end }}
+
+        <!-- Navigation menu -->
+        {{ partial "blog/navbar" . }}
+
+        <!-- Blog post list -->
+        <div class="row">
+            {{ range .Data.Pages }}
+            {{ .Render "list-item" }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,20 @@
+{{ if .Site.Data.hero_area.enable }}
+<section class="hero-area" style='background-image: url("{{ .Site.Data.hero_area.bgImage | absURL }}");'>
+    <div class="block">
+        <!-- Background logo -->
+        {{with .Site.Data.hero_area.logoImage}}<img class="logo" src="{{ . | absURL }}" alt="YS logo">{{ end }}
+
+        <!-- Heading and subheading -->
+        {{with .Site.Data.hero_area.heading}}<h1>{{ . }}</h1>{{ end }}
+        {{with .Site.Data.hero_area.content}}<h2>{{ . }}</h2> {{ end }}
+
+        <!-- "Explore Us" button -->
+        {{ with .Site.Data.hero_area.button }}
+        <a data-scroll href="{{ .url }}" class="btn btn-transparent">
+            {{ .title }}
+            <div class="down-arrow tf-ion-chevron-down"><i></i></div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{end}}

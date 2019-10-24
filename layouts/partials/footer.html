@@ -1,0 +1,46 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Copyright -->
+            <div class="col-md-3">
+                <div class="copyright">
+                    <p>Copyright &copy;{{ .Site.Data.footer.copyrightFrom }}-{{ now.Year }} <a href="{{ .Site.Data.footer.copyrightURL | absURL }}">{{ .Site.Data.footer.copyright }}</a>.</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="col-md-3">
+                <h6>{{ T "home" }}</h6>
+                <ul class="nav flex-column">
+                    {{ range $.Site.Menus.nav -}}
+                    <li class="nav-item"><a class="nav-link" data-scroll href="{{ .URL | relURL }}">{{ T .Identifier }}</a></li>
+                    {{ end -}}
+                </ul>
+            </div>
+
+            <!-- Blog menu -->
+            <div class="col-md-3">
+                <h6>{{ T "blog" }}</h6>
+                <ul class="nav flex-column">
+                    {{ $currentPage := . }}
+                    {{ range $.Site.Menus.blog }}
+                    <li class="nav-item">
+                        <a href="{{ .URL }}" class="nav-link{{ if $currentPage.IsMenuCurrent `blog` . }} active{{ end }}">{{ T .Identifier }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Social links -->
+            <div class="col-md-3 social-icons">
+                <h6>{{ T "followUs" }}</h6>
+                <ul class="nav flex-column">
+                    {{ range .Site.Data.footer.socialIcon }}
+                    <li class="nav-item"><a class="nav-link" href="{{ .url }}" title="{{ .title }}"><i class="{{ .icon }}"></i></a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
