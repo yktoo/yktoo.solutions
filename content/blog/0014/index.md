@@ -46,9 +46,9 @@ One thing worth mentioning here is that the *Admin API*, which is used to retrie
 
 On the other hand, the limit is set at 500 requests per hour, and each request can fetch up to 500 items, which means if you host less than **250 K** files, you're probably fine.
 
-## To-do
+## Removing redundant files
 
-I plan to also add file removal to the sync routine, so that local files that aren't present in Cloudinary can be automatically cleaned up.
+If the program is started with the `-d` command line switch, local files that aren't present in Cloudinary will be automatically cleaned up.
 
 ## Source code
 
