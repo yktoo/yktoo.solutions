@@ -2,9 +2,16 @@ enable: true
 heading: Our Clients
 bgImage: images/backgrounds/bg-1.jpg
 testimonialItem:
+    - name: Postoplan
+      image: images/testimonial/postoplan.png
+      content: All-in-one automatic social media marketing system.
+
     - name: Telfort
       image: images/testimonial/telfort.png
-      content: Mobile telecommunications company<br>_(nowadays acquired by KPN)_.
+      content: |
+          Mobile telecommunications company
+
+          *(nowadays acquired by KPN)*.
 
     - name: ING Bank
       image: images/testimonial/ing.png

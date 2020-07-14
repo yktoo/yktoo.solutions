@@ -5,6 +5,9 @@ filters:
     - tag: cloud
       title: Cloud
 
+    - tag: go
+      title: Go
+
     - tag: docker
       title: Docker
 
@@ -24,6 +27,13 @@ filters:
       title: ETL
 
 portfolioItem:
+    - title: Ymuse
+      image: images/portfolio/ymuse.png
+      description: Easy, functional, and snappy GTK client for Music Player Daemon written in Go.
+      customer: Public Domain
+      url: https://yktoo.com/en/software/ymuse/
+      tags: go
+
     - title: Electronic Ticketing System
       image: images/portfolio/lbs-et.png
       description: Desktop application for NS railway ticket counters.
@@ -70,21 +80,21 @@ portfolioItem:
       image: images/portfolio/indicator-sound-switcher.png
       description: Sound input/output switcher application for Linux.
       customer: Public Domain
-      url: https://yktoo.com/en/software/indicator-sound-switcher
+      url: https://yktoo.com/en/software/indicator-sound-switcher/
       tags: python
 
     - title: Docker Indicator
       image: images/portfolio/indicator-docker.png
       description: Application indicator for controlling Docker containers in Ubuntu Linux.
       customer: Public Domain
-      url: https://yktoo.com/en/software/indicator-docker
+      url: https://yktoo.com/en/software/indicator-docker/
       tags: python
 
     - title: InfoPi
       image: images/portfolio/infopi.png
       description: Information screen web application for Raspberry Pi.
       customer: Public Domain
-      url: https://yktoo.com/en/blog/post/278
+      url: https://yktoo.com/en/software/infopi/
       tags: angular, python
 
     - title: Rattle
@@ -105,19 +115,19 @@ portfolioItem:
       image: images/portfolio/phoa.png
       description: Powerful image catalogue software.
       customer: Public Domain
-      url: https://yktoo.com/en/software/phoa
+      url: https://yktoo.com/en/software/phoa/
       tags: delphi
 
     - title: DKLang Localization Package
       image: images/portfolio/dklang.png
       description: Open source localisation library for Delphi.
       customer: Public Domain
-      url: https://yktoo.com/en/software/dklang
+      url: https://yktoo.com/en/software/dklang/
       tags: delphi
 
     - title: PackageEditor
       image: images/portfolio/oracle-package-editor.png
       description: Package code editor for Oracle Database.
       customer: Public Domain
-      url: https://yktoo.com/en/software/oracle-package-editor
+      url: https://yktoo.com/en/software/oracle-package-editor/
       tags: delphi, db
