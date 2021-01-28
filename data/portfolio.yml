@@ -9,7 +9,7 @@ filters:
       title: Go
 
     - tag: docker
-      title: Docker
+      title: K8s & Docker
 
     - tag: java
       title: Java

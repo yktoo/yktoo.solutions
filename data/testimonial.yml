@@ -2,6 +2,10 @@ enable: true
 heading: Our Clients
 bgImage: images/backgrounds/bg-1.jpg
 testimonialItem:
+    - name: Rijkswaterstaat
+      image: images/testimonial/rijkswaterstaat.png
+      content: Dutch government body charged with execution of the public works and water management.
+
     - name: Postoplan
       image: images/testimonial/postoplan.png
       content: All-in-one automatic social media marketing system.
