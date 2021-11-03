@@ -21,7 +21,7 @@
 
             <!-- Contact form -->
             <div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                <form id="contact-form" class="contact-form" method="post" action="{{ .Site.Data.contact.action | absURL }}" novalidate>
+                <form id="contact-form" class="contact-form" method="POST" action="{{ .Site.Data.contact.action | absURL }}" novalidate>
                     <input type="hidden" name="_language" value="{{ .Site.Language.Lang }}" />
                     <div class="form-group">
                         <input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>

@@ -5,7 +5,7 @@ content: Feel free to contact us using the feedback form or the email below.
 enable_maps: false
 mapLatitude: 51.5223477
 mapLongitude: -0.1622023
-action: https://formspree.io/info@yktoo.solutions
+action: https://formspree.io/f/xbjqvkde
 contactDetails:
     - icon: tf-ion-location
       info: "Houten, Utrecht, Netherlands"
