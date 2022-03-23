@@ -31,14 +31,6 @@ teamMember:
           - icon: tf-ion-social-instagram
             url: "https://www.instagram.com/edward_the_grey"
 
-    - image: images/team/diana-kovalenko.jpg
-      name: Diana Kovalenko
-      designation: Web Designer
-      description: Helping people to find the right solution in a creative way.
-      socialIcon:
-          - icon: tf-ion-social-linkedin
-            url: "https://www.linkedin.com/in/diana-kovalenko/"
-
     - image: images/team/andrew-dudko.jpg
       name: Andrew Dudko
       designation: Full Stack Developer
