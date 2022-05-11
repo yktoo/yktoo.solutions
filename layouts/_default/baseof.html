@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}" scroll-behavior="smooth">
+<head>
     {{ partial "head.html" . }}
-    <body id="body" data-spy="scroll" data-target="#navigation" data-offset="52">
-        <div id="content" class="{{ if .IsHome }}home{{ else }}nonhome{{ end }}">
-        {{ block "main" . }}{{ end }}
-        </div>
-        {{ partial "footer.html" . }}
-        {{ partial "scripts.html" . }}
-        {{ template "_internal/google_analytics_async.html" . }}
-    </body>
+</head>
+<body id="body" data-spy="scroll" data-target="#navigation" data-offset="52">
+    <div id="content" class="{{ if .IsHome }}home{{ else }}nonhome{{ end }}">
+    {{ block "main" . }}{{ end }}
+    </div>
+    {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
+</body>
 </html>
