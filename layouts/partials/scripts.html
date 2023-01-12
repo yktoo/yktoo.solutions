@@ -1,13 +1,20 @@
-<script src="{{ "plugins/jquery/dist/jquery.min.js" | absURL }}"></script>
-<script src="{{ "plugins/bootstrap/dist/js/bootstrap.bundle.min.js" | absURL }}"></script>
-<script src="{{ "plugins/slick-carousel/slick/slick.min.js" | absURL }}"></script>
-<script src="{{ "plugins/filterzr/jquery.filterizr.min.js" | absURL }}"></script>
-<script src="{{ "plugins/magnific-popup/dist/jquery.magnific-popup.min.js" | absURL }}"></script>
-{{ with .Site.Params.GoogleMaps }}
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ . }}&libraries=places"></script>
-    <script src="{{ (resources.Get "js/gmaps.js" | minify).Permalink }}"></script>
-{{ end }}
-<script src="{{ "plugins/wow/dist/wow.min.js" | absURL }}"></script>
-<script src="{{ "plugins/sweet-alert/sweetalert.min.js" | absURL }}"></script>
-<script src="{{ (resources.Get "js/scroll-behavior-polyfill.js" | minify).Permalink }}"></script>
-<script src="{{ (resources.Get "js/script.js" | minify).Permalink }}"></script>
+<!-- Google Analytics (do not add the code when running locally) -->
+{{- if not (in (print $.Site.BaseURL) "localhost") }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ .Site.GoogleAnalytics }}');
+</script>
+{{- end }}
+
+{{- $js := slice       (resources.Get "node_modules/jquery/dist/jquery.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/filterizr/dist/jquery.filterizr.min.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/popper.js/dist/umd/popper.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/bootstrap/dist/js/bootstrap.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/magnific-popup/dist/jquery.magnific-popup.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/slick-carousel/slick/slick.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/wowjs/dist/wow.js") -}}
+{{- $js = $js | append (resources.Get "main.js") -}}
+<script src="{{ ($js | resources.Concat `js/bundle.js` | minify).Permalink }}"></script>

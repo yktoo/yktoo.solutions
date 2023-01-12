@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum|Montserrat|Merriweather:400,700&display=swap&subset=cyrillic');
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/animate.css/animate";
+@import "node_modules/magnific-popup/dist/magnific-popup";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
 /*
 Color scale
 ===========
 
 #ffcc00
-
 #04a169
 #6cb670
 */
@@ -12,6 +18,7 @@ html {
     background-color: #353b43;
     color: #737f8a;
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 body {
     background-color: #292f36;
@@ -26,11 +33,16 @@ body {
 }
 .section {
     padding: 25px 0 100px 0;
-    background: #353b43;
+    background-color: #353b43;
 }
 .section-dark {
-    background: #292f36;
+    background-color: #292f36;
 }
+.section-light {
+    background-color: #ffffff;
+    color: #323232;
+}
+
 #content.home .section {
     padding-top: 100px;
 }
@@ -50,19 +62,15 @@ body {
 .section-xs {
     padding: 50px 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-    font-family: "Merriweather", sans-serif;
-    color: #04a169;
+
+@for $h from 1 through 6 {
+    h#{$h} {
+        font-weight: 400;
+        font-family: "Merriweather", sans-serif;
+        color: #04a169;
+    }
 }
-[scroll-behavior=smooth] {
-    scroll-behavior: smooth;
-}
+
 pre {
     background-color: #e0e0e0;
     padding: 1rem;
@@ -85,17 +93,13 @@ iframe {
 /* Link */
 a {
     color: #04a169;
-    transition: all .3s ease-in 0s;
-}
-a,
-a:focus,
-a:hover {
-    text-decoration: none;
-    outline: 0;
-}
-a:focus,
-a:hover {
-    color: #ffcc00;
+    transition: color .3s ease-in 0s;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        outline: 0;
+        color: #ffcc00;
+    }
 }
 .kill-margin-bottom {
     margin-bottom: 0 !important;
@@ -238,21 +242,10 @@ figcaption {
     bottom: 0;
     left: 0;
 }
-.header-bradcrumb {
-    background: transparent;
-}
-.header-bradcrumb a,
-.header-bradcrumb .active {
-    color: #cfcfcf;
-    font-weight: 200;
-    font-family: "Merriweather", sans-serif;
-}
-.header-bradcrumb a:hover {
-    color: #06774f;
-}
 .slick-slide {
     outline: none;
 }
+
 /* CSS mfp-with-zoom class */
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
@@ -481,7 +474,6 @@ figcaption {
     border-bottom: 4px solid #ffcc00;
 }
 .about .block:hover .icon-box {
-    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
 }
 .about .block .icon-box {
@@ -494,10 +486,8 @@ figcaption {
     border-left: 2px solid rgba(236, 239, 241, 0.2);
     border-right: 2px solid rgba(236, 239, 241, 0.2);
     font-size: 50px;
-    -webkit-transform: translateZ(0px);
     transform: translateZ(0px);
     transition-duration: 0.3s;
-    transition-property: transform, -webkit-transform;
 }
 .about .block .icon-box:after,
 .about .block .icon-box:before {
@@ -508,7 +498,6 @@ figcaption {
     height: 113px;
     background-color: inherit;
     left: 20px;
-    -webkit-transform: scaleY(0.5774) rotate(-45deg);
     transform: scaleY(0.5774) rotate(-45deg);
 }
 .about .block .icon-box:before {
@@ -660,7 +649,6 @@ figcaption {
     transition-duration: 0.3s;
 }
 .service-block:hover .service-icon {
-    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
     color: #ffcc00;
 }
@@ -738,7 +726,6 @@ figcaption {
     top: 50%;
     left: 50%;
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 9;
     transition: all 0.2s ease-in-out;
@@ -839,7 +826,6 @@ figcaption {
     cursor: pointer;
     opacity: 1;
     filter: alpha(opacity=100);
-    -webkit-transform: rotateY(0deg) scale(1, 1);
     transform: rotateY(0deg) scale(1, 1);
 }
 .member-photo {
@@ -852,7 +838,6 @@ figcaption {
     }
 }
 .member-photo:hover img {
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
 .member-photo img {
@@ -874,7 +859,6 @@ figcaption {
     opacity: 0;
     filter: alpha(opacity=0);
     transition: all .5s ease-out 0s;
-    -webkit-transform: rotateY(180deg) scale(0.5, 0.5);
     transform: rotateY(180deg) scale(0.5, 0.5);
 }
 .member-photo .mask ul {
@@ -1281,4 +1265,287 @@ figcaption {
     background-color: transparent;
     padding: 0;
     color: #e83e8c;
+}
+
+/***********************************************************************************************************************
+ Social sharing buttons from SharingButtons.io
+***********************************************************************************************************************/
+
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+    display: inline-block
+}
+
+.resp-sharing-button__link {
+    text-decoration: none;
+    color: #fff;
+    margin: 2px;
+}
+
+.resp-sharing-button {
+    border-radius: 5px;
+    transition: 25ms ease-out;
+    padding: 0.5em 0.75em;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+}
+
+.resp-sharing-button__icon svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: center;
+}
+
+.resp-sharing-button--small svg {
+    margin: 0;
+    vertical-align: middle
+}
+
+/* Non solid icons get a stroke */
+.resp-sharing-button__icon {
+    stroke: #fff;
+    fill: none
+}
+
+/* Solid icons get a fill */
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+    fill: #fff;
+    stroke: none
+}
+
+.resp-sharing-button--twitter {
+    background-color: #55acee
+}
+
+.resp-sharing-button--twitter:hover {
+    background-color: #2795e9
+}
+
+.resp-sharing-button--pinterest {
+    background-color: #bd081c
+}
+
+.resp-sharing-button--pinterest:hover {
+    background-color: #8c0615
+}
+
+.resp-sharing-button--facebook {
+    background-color: #3b5998
+}
+
+.resp-sharing-button--facebook:hover {
+    background-color: #2d4373
+}
+
+.resp-sharing-button--tumblr {
+    background-color: #35465C
+}
+
+.resp-sharing-button--tumblr:hover {
+    background-color: #222d3c
+}
+
+.resp-sharing-button--reddit {
+    background-color: #5f99cf
+}
+
+.resp-sharing-button--reddit:hover {
+    background-color: #3a80c1
+}
+
+.resp-sharing-button--google {
+    background-color: #dd4b39
+}
+
+.resp-sharing-button--google:hover {
+    background-color: #c23321
+}
+
+.resp-sharing-button--linkedin {
+    background-color: #0077b5
+}
+
+.resp-sharing-button--linkedin:hover {
+    background-color: #046293
+}
+
+.resp-sharing-button--email {
+    background-color: #777
+}
+
+.resp-sharing-button--email:hover {
+    background-color: #5e5e5e
+}
+
+.resp-sharing-button--xing {
+    background-color: #1a7576
+}
+
+.resp-sharing-button--xing:hover {
+    background-color: #114c4c
+}
+
+.resp-sharing-button--whatsapp {
+    background-color: #25D366
+}
+
+.resp-sharing-button--whatsapp:hover {
+    background-color: #1da851
+}
+
+.resp-sharing-button--hackernews {
+    background-color: #FF6600
+}
+
+.resp-sharing-button--hackernews:hover,
+.resp-sharing-button--hackernews:focus {
+    background-color: #FB6200
+}
+
+.resp-sharing-button--vk {
+    background-color: #507299
+}
+
+.resp-sharing-button--vk:hover {
+    background-color: #43648c
+}
+
+.resp-sharing-button--facebook {
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+    background-color: #2d4373;
+    border-color: #2d4373;
+}
+
+.resp-sharing-button--twitter {
+    background-color: #55acee;
+    border-color: #55acee;
+}
+
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+    background-color: #2795e9;
+    border-color: #2795e9;
+}
+
+.resp-sharing-button--google {
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+}
+
+.resp-sharing-button--google:hover,
+.resp-sharing-button--google:active {
+    background-color: #c23321;
+    border-color: #c23321;
+}
+
+.resp-sharing-button--tumblr {
+    background-color: #35465C;
+    border-color: #35465C;
+}
+
+.resp-sharing-button--tumblr:hover,
+.resp-sharing-button--tumblr:active {
+    background-color: #222d3c;
+    border-color: #222d3c;
+}
+
+.resp-sharing-button--email {
+    background-color: #777777;
+    border-color: #777777;
+}
+
+.resp-sharing-button--email:hover,
+.resp-sharing-button--email:active {
+    background-color: #5e5e5e;
+    border-color: #5e5e5e;
+}
+
+.resp-sharing-button--pinterest {
+    background-color: #bd081c;
+    border-color: #bd081c;
+}
+
+.resp-sharing-button--pinterest:hover,
+.resp-sharing-button--pinterest:active {
+    background-color: #8c0615;
+    border-color: #8c0615;
+}
+
+.resp-sharing-button--linkedin {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.resp-sharing-button--linkedin:hover,
+.resp-sharing-button--linkedin:active {
+    background-color: #046293;
+    border-color: #046293;
+}
+
+.resp-sharing-button--reddit {
+    background-color: #5f99cf;
+    border-color: #5f99cf;
+}
+
+.resp-sharing-button--reddit:hover,
+.resp-sharing-button--reddit:active {
+    background-color: #3a80c1;
+    border-color: #3a80c1;
+}
+
+.resp-sharing-button--xing {
+    background-color: #1a7576;
+    border-color: #1a7576;
+}
+
+.resp-sharing-button--xing:hover,
+.resp-sharing-button--xing:active {
+    background-color: #114C4C;
+    border-color: #114C4C;
+}
+
+.resp-sharing-button--whatsapp {
+    background-color: #25D366;
+    border-color: #25D366;
+}
+
+.resp-sharing-button--whatsapp:hover,
+.resp-sharing-button--whatsapp:active {
+    background-color: #1DA851;
+    border-color: #1DA851;
+}
+
+.resp-sharing-button--hackernews {
+    background-color: #FF6600;
+    border-color: #FF6600;
+}
+
+.resp-sharing-button--hackernews:hover,
+.resp-sharing-button--hackernews:active {
+    background-color: #FB6200;
+    border-color: #FB6200;
+}
+
+.resp-sharing-button--vk {
+    background-color: #507299;
+    border-color: #507299;
+}
+
+.resp-sharing-button--vk:hover,
+.resp-sharing-button--vk:active {
+    background-color: #43648c;
+    border-color: #43648c;
+}
+
+.resp-sharing-button--telegram {
+    background-color: #54A9EB;
+}
+
+.resp-sharing-button--telegram:hover {
+    background-color: #4B97D1;
 }

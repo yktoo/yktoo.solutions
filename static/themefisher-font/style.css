@@ -11,6 +11,7 @@
 
 [class^="tf-"], [class*=" tf-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
+  /*noinspection CssNoGenericFontName*/
   font-family: 'themefisher-font' !important;
   speak: none;
   font-style: normal;

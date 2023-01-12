@@ -1,0 +1,21 @@
+{
+    "name": "yktoo.solutions",
+    "version": "1.0.0",
+    "description": "Yktoo Solutions website",
+    "scripts": {
+        "build": "hugo --gc --minify",
+        "prebuild": "rm -rf public",
+        "start": "hugo server -DF"
+    },
+    "author": "Yktoo Solutions",
+    "repository": "https://github.com/yktoo/yktoo.solutions",
+    "dependencies": {
+        "animate.css": "^3.7.2",
+        "bootstrap": "^4.6.2",
+        "filterizr": "^2.2.4",
+        "jquery": "^3.6.3",
+        "magnific-popup": "^1.1.0",
+        "slick-carousel": "^1.8.1",
+        "wowjs": "^1.1.3"
+    }
+}

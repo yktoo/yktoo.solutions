@@ -60,5 +60,16 @@ params:
     logo: images/logos/logo-48px.png
     description: First Time Right
     author: Yktoo Solutions
-    # googleMaps: AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU
     frontPagePosts: 3
+
+module:
+    hugoVersion:
+        extended: true
+        min: "v0.108.0"
+    mounts:
+        - source: node_modules
+          target: assets/node_modules
+        - source: assets
+          target: assets
+        - source: static
+          target: static
