@@ -2,18 +2,18 @@ enable: true
 bgImage: images/backgrounds/bg-1.jpg
 counterItem:
     - icon: tf-ion-clock
-      count: 26
+      count: 27
       title: Years of Experience
 
     - icon: tf-ion-android-happy
-      count: 24
+      count: 25
       title: Happy Clients
 
     - icon: tf-ion-archive
-      count: 33
+      count: 36
       title: Projects Completed
 
     - icon: tf-ion-social-github
-      count: 15
+      count: 16
       title: Open-Source Projects
 
