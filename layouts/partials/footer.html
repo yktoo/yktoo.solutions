@@ -11,10 +11,10 @@
 
             <!-- Menu -->
             <div class="col-md-3">
-                <h6>{{ T "home" }}</h6>
+                <h6>{{ T "about" }}</h6>
                 <ul class="nav flex-column">
-                    {{ range $.Site.Menus.nav -}}
-                    <li class="nav-item"><a class="nav-link" data-scroll href="{{ .URL | relURL }}">{{ T .Identifier }}</a></li>
+                    {{ range $.Site.Menus.footer -}}
+                    <li class="nav-item"><a class="nav-link" data-scroll href="{{ .Page.RelPermalink }}">{{ .Title }}</a></li>
                     {{ end -}}
                 </ul>
             </div>

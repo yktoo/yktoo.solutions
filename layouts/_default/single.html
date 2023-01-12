@@ -1,0 +1,16 @@
+{{- define "main" }}
+
+{{- partial "main/navigation.html" . }}
+
+<section id="content" class="section section-light">
+    <div class="container">
+        <!-- Heading, if any -->
+        {{- with .Params.heading }}
+        <h1>{{ . }}</h1>
+        {{- end }}
+
+        <!-- Main content -->
+        {{ .Content }}
+    </div>
+</section>
+{{- end }}
