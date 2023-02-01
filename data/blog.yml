@@ -2,4 +2,4 @@ enable: true
 sharing: true
 comments:
     enable: true
-    url: https://comment.yktoo.com/js/commento.js
+    url: https://comment.yktoo.com/js/comentario.js
