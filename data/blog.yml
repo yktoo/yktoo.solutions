@@ -2,4 +2,4 @@ enable: true
 sharing: true
 comments:
     enable: true
-    url: https://comentario.app/js/comentario.js
+    url: https://comentario.app/comentario.js
