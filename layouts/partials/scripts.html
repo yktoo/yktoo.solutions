@@ -1,14 +1,3 @@
-<!-- Google Analytics (do not add the code when running locally) -->
-{{- if not (in (print $.Site.BaseURL) "localhost") }}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ .Site.GoogleAnalytics }}');
-</script>
-{{- end }}
-
 {{- $js := slice       (resources.Get "node_modules/jquery/dist/jquery.js") -}}
 {{- $js = $js | append (resources.Get "node_modules/filterizr/dist/jquery.filterizr.min.js") -}}
 {{- $js = $js | append (resources.Get "node_modules/popper.js/dist/umd/popper.js") -}}
