@@ -37,8 +37,8 @@
                         {{ if or .Draft (in (print $.Site.BaseURL) "localhost") }}
                         <div>(comments will go here)</div>
                         {{ else }}
-                        <div id="comentario"></div>
-                        <script src="{{ .Site.Data.blog.comments.url }}"></script>
+                        <script defer src="{{ .Site.Data.blog.comments.url }}"></script>
+                        <comentario-comments></comentario-comments>
                         {{ end }}
                     </section>
                     {{ end }}
