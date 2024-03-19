@@ -21,7 +21,7 @@
                                 <span>{{ .client }}</span>
                             </div>
                             <div class="client-comment">
-                                <p>{{ .content | markdownify }}</p>
+                                <p>{{ .content | $.RenderString }}</p>
                             </div>
                         </div>
                     </div>

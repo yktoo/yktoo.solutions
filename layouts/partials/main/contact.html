@@ -13,7 +13,7 @@
                     {{ range .Site.Data.contact.contactDetails }}
                     <div class="con-info clearfix">
                         <i class="{{ .icon }}"></i>
-                        <span>{{ .info | markdownify }}</span>
+                        <span>{{ .info | $.RenderString }}</span>
                     </div>
                     {{ end }}
                 </div>

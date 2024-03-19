@@ -14,7 +14,7 @@
         <div class="content">
             <h5><a href="{{ .Permalink }}">{{ with .Params.name }}{{ . }}{{ else }}{{ .Title }}{{ end }}</a></h5>
             <p class="post-details">{{ dateFormat "Monday, Jan 2, 2006" .Date }} by <a href="/author/{{ urlize .Params.author }}">{{ .Params.author }}</a></p>
-            <p>{{ with .Params.description }}{{ . | markdownify }}{{ else }}{{ .Summary }}{{ end }}</p>
+            <p>{{ with .Params.description }}{{ . | $.RenderString }}{{ else }}{{ .Summary }}{{ end }}</p>
             <a class="btn btn-transparent" href="{{ .Permalink }}">{{ T "readOn" }}</a>
         </div>
     </div>

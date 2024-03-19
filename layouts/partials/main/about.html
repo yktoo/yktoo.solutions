@@ -1,9 +1,9 @@
 <!-- "About" section #1 -->
-{{ if .Site.Data.about.enable }}
+{{- if .Site.Data.about.enable }}
 <section class="about section" id="about">
     <div class="container">
         <!-- Heading -->
-        {{ with .Site.Data.about.heading }}{{ partial "main/heading" . }}{{ end }}
+        {{- with .Site.Data.about.heading }}{{ partial "main/heading" . }}{{ end }}
 
         <!-- "We're ..." blocks -->
         <div class="row">
@@ -11,11 +11,11 @@
             <div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
                 <div class="block">
                     <div class="icon-box">
-                        {{with .icon}}<i class="{{ . }}"></i>{{ end }}
+                        {{- with .icon }}<i class="{{ . }}"></i>{{ end }}
                     </div>
                     <div class="content text-center">
-                        {{ with .title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
-                        <p>{{ .content | markdownify }}</p>
+                        {{- with .title }}<h3 class="ddd">{{ . }}</h3>{{ end }}
+                        <p>{{ .content | $.RenderString }}</p>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
         </div>
     </div>
 </section>
-{{ end }}
+{{- end }}
 
 <!-- "About" section #2 -->
 {{ if .Site.Data.about2.enable }}

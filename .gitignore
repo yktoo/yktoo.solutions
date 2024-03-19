@@ -1,6 +1,7 @@
 # Generated content
-node_modules/
-resources/_gen/
+/node_modules/
+/resources/_gen/
+/public/
 .hugo_build.lock
 
 # IDEs

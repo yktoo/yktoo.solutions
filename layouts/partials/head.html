@@ -19,7 +19,7 @@
 <link href="{{ (resources.Get `main.scss` | toCSS | minify).Permalink }}" rel="stylesheet">
 
 <!-- Page title -->
-<title>{{ if .IsHome }}{{ .Site.Title }}{{" | "}}{{ .Site.Params.Description }}{{ else if .IsPage}}{{ .Title }}{{" | "}}{{ .CurrentSection.Title }}{{else if eq .Section "author" }}{{if .Params.name}}{{.Params.name}} | {{ T "authorOfPostsOnBlog" }} „{{.Site.Title}}" {{else}}{{ T "authorsOfPostsOnBlog" }} „{{.Site.Title}}"{{end}}{{else if eq .Section "blog" }}{{ T "blogs" }} | {{ .Site.Title}}{{else}}{{ .Title }}{{with .Params.Description}}{{" | " .}}{{ end }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{" | "}}{{ .Site.Params.Description }}{{ else if .IsPage}}{{ .Title }}{{" | "}}{{ .CurrentSection.Title }}{{ else if eq .Section "author" }}{{if .Params.name}}{{.Params.name}} | {{ T "authorOfPostsOnBlog" }} „{{.Site.Title}}" {{else}}{{ T "authorsOfPostsOnBlog" }} „{{.Site.Title}}"{{end}}{{else if eq .Section "blog" }}{{ T "blogs" }} | {{ .Site.Title}}{{else}}{{ .Title }}{{with .Params.Description}}{{" | " .}}{{ end }}{{ end }}</title>
 
 <!-- Favicon   -->
 <link rel="shortcut icon" type="image/x-icon" href="{{ `favicon.ico` | absURL }}"/>

@@ -24,7 +24,7 @@
                 {{- with .Resources.GetMatch .Params.image -}}
                     {{- printf `<img style="width: 500px; height: auto;" src=%q alt="Post image">` .Permalink | html -}}
                 {{- end -}}
-                {{- cond (isset .Params "description") (markdownify .Params.description) .Summary | html -}}
+                {{- cond (isset .Params "description") (.Params.description | .RenderString) .Summary | html -}}
                 {{- printf "<hr><p><a href=%q>Read On »</a></p>" .Permalink | html -}}
             </description>
         </item>
