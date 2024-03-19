@@ -33,6 +33,12 @@ portfolioItem:
       url: https://once.to/
       tags: go, db, angular, docker
 
+    - title: Comentario
+      image: images/portfolio/comentario.png
+      description: Open-source comment platform for websites.
+      url: https://comentario.app/
+      tags: go, db, angular, docker
+
     - title: Ymuse
       image: images/portfolio/ymuse.png
       description: Easy, functional, and snappy GTK client for Music Player Daemon written in Go.
