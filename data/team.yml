@@ -19,22 +19,16 @@ teamMember:
             url: "https://yktoo.tumblr.com/"
             title: Tumblr feed
 
-    - image: images/team/yury-kann.jpg
-      name: Yury Kann
-      designation: Media Designer
-      description: As a graphic designer, inspired by digital aesthetics.
-      socialIcon:
-          - icon: tf-ion-social-linkedin
-            url: "https://www.linkedin.com/in/yury-kann-25541818b/"
-          - icon: tf-ion-social-facebook
-            url: "https://www.facebook.com/yury.kann.5"
-          - icon: tf-ion-social-instagram
-            url: "https://www.instagram.com/edward_the_grey"
-
     - image: images/team/andrew-dudko.jpg
       name: Andrew Dudko
       designation: Full Stack Developer
       description: Software development is fun!
+
+    - image: images/team/anna-perkinson.jpg
+      name: Anna Perkinson
+      designation: UX Designer
+      description: Taking care of the best looking visual interfaces.
+      socialIcon:
 
     - image: images/team/ada-de-vries.jpg
       name: Ada de Vries
