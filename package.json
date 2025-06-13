@@ -11,7 +11,7 @@
     "repository": "https://github.com/yktoo/yktoo.solutions",
     "dependencies": {
         "animate.css": "^4.1.1",
-        "bootstrap": "^4.6.2",
+        "bootstrap": "^5.0.0",
         "filterizr": "^2.2.4",
         "jquery": "^3.7.1",
         "magnific-popup": "^1.2.0",
