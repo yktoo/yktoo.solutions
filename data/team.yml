@@ -29,6 +29,9 @@ teamMember:
       designation: UX Designer
       description: Taking care of the best looking visual interfaces.
       socialIcon:
+        - icon: tf-ion-social-linkedin
+          url: "https://www.linkedin.com/in/anna-perkinson/"
+          title: LinkedIn profile
 
     - image: images/team/ada-de-vries.jpg
       name: Ada de Vries
